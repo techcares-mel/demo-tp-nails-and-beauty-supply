@@ -1,19 +1,19 @@
 /* ============================================================
    TP Nails and Beauty Supply — styles.css
-   Template: C (Default/Generic) — Premium Dark E-Commerce
-   Accent: #ac873e (warm gold) | Theme: dark
+   Template: C (Default/Generic) — Premium Light E-Commerce
+   Accent: #bc9443 (warm gold) | Theme: light
    ============================================================ */
 
 :root {
-  --accent: #ac873e;
-  --accent-hover: #b8995b;
-  --accent-glow: rgba(172, 135, 62, 0.25);
-  --bg: #0a0a0a;
-  --surface: #4a3623;
-  --card: #1a1a1a;
-  --text: #ffffff;
-  --text-muted: #999999;
-  --border: rgba(255,255,255,0.08);
+  --accent: #bc9443;
+  --accent-hover: #c6a45f;
+  --accent-glow: rgba(188, 148, 67, 0.2);
+  --bg: #f8f8f8;
+  --surface: #f0ece5;
+  --card: #ffffff;
+  --text: #111111;
+  --text-muted: #666666;
+  --border: rgba(0,0,0,0.1);
   --radius: 12px;
   --max-width: 1280px;
   --section-pad: clamp(4rem, 8vw, 8rem);
@@ -97,7 +97,7 @@ h1, h2, h3, h4 {
    ============================================================ */
 .top-bar {
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
   padding: 0.4rem 1.5rem;
   font-size: 0.8rem;
   font-family: 'Inter', sans-serif;
@@ -126,7 +126,7 @@ h1, h2, h3, h4 {
 }
 
 .nav.scrolled {
-  background: rgba(10, 10, 10, 0.96);
+  background: rgba(248, 248, 248, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -182,7 +182,7 @@ h1, h2, h3, h4 {
   top: 0;
   right: 0;
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
   font-size: 0.65rem;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
@@ -341,7 +341,7 @@ h1, h2, h3, h4 {
 
 .btn-primary {
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
 }
 .btn-primary:hover {
   background: var(--accent-hover);
@@ -445,7 +445,7 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(172,135,62,0.15);
+  background: rgba(188,148,67,0.12);
   border: 1px solid var(--accent);
   color: var(--accent);
   padding: 0.5rem 1.2rem;
@@ -500,7 +500,7 @@ h1, h2, h3, h4 {
   border-radius: 20px;
   aspect-ratio: 4/5;
   object-fit: cover;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
 }
 
 @media (max-width: 768px) {
@@ -543,7 +543,7 @@ h1, h2, h3, h4 {
 .filter-btn:hover,
 .filter-btn.active {
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
   border-color: var(--accent);
 }
 
@@ -563,7 +563,7 @@ h1, h2, h3, h4 {
 }
 .product-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 }
 .product-card.hidden { display: none; }
 
@@ -585,7 +585,7 @@ h1, h2, h3, h4 {
   top: 0.75rem;
   left: 0.75rem;
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
   font-size: 0.7rem;
   font-weight: 600;
   padding: 0.25rem 0.6rem;
@@ -599,7 +599,7 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
   border: none;
   padding: 0.75rem;
   font-family: 'Inter', sans-serif;
@@ -657,7 +657,7 @@ h1, h2, h3, h4 {
 }
 .add-to-cart-btn:hover {
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
 }
 
 @media (max-width: 1024px) {
@@ -853,7 +853,7 @@ h1, h2, h3, h4 {
   bottom: 1.5rem;
   left: 1.5rem;
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
   padding: 0.75rem 1.25rem;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -1009,10 +1009,24 @@ h1, h2, h3, h4 {
    FOOTER
    ============================================================ */
 .footer {
-  background: #050505;
-  border-top: 1px solid var(--border);
+  background: #1a1208;
+  border-top: 1px solid rgba(0,0,0,0.15);
   padding: 4rem 0 0;
+  color: #f0e8d6;
 }
+.footer .footer-business-name,
+.footer .footer-col h4,
+.footer .footer-col ul li a,
+.footer .footer-col address p,
+.footer .footer-col address a,
+.footer .footer-desc,
+.footer-bottom p {
+  color: #c9b99a;
+}
+.footer .footer-business-name { color: #f0e8d6; }
+.footer .footer-col h4 { color: #f0e8d6; }
+.footer .footer-col ul li a:hover,
+.footer .footer-col address a { color: var(--accent); }
 
 .footer-grid {
   display: grid;
@@ -1106,7 +1120,7 @@ h1, h2, h3, h4 {
   height: 48px;
   border-radius: 50%;
   background: var(--accent);
-  color: var(--bg);
+  color: #1a1208;
   border: none;
   cursor: pointer;
   opacity: 0;
