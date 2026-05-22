@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!-- Template: C (Default/Generic) — nail supply store, premium e-commerce dark layout with warm gold accent -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP Nails and Beauty Supply — Professional Nail & Beauty Supplies Melbourne</title>
+  <meta name="description" content="TP Nails and Beauty Supply — professional nail technician supplies, gel polish, acrylic products, tools and beauty accessories. Located at 46A Berkshire Rd, Sunshine North VIC 3020.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- DEMO Watermark -->
+  <div class="demo-watermark">DEMO</div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress"></div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <span>📍 46A Berkshire Rd, Sunshine North VIC 3020</span>
+    <span>📞 0451 228 899 · Mon–Sat: Call for hours</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="images/LOgo.png" alt="TP Nails and Beauty Supply" style="height:52px;">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#shop" class="mobile-link">Shop</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">A$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout (Demo)</button>
+      <p class="cart-note">* Demo only — no real orders placed</p>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-eyebrow reveal">✨ Professional Nail &amp; Beauty Supplies</span>
+        <h1 class="reveal d1">Your Premier <em>Nail Supply</em> Store in Melbourne</h1>
+        <p class="hero-desc reveal d2">TP Nails and Beauty Supply stocks professional nail technicians and beauty enthusiasts with a wide range of nail products, tools, and beauty supplies — conveniently located in Sunshine North, Melbourne's western suburbs.</p>
+        <div class="hero-btns reveal d3">
+          <a href="#shop" class="btn btn-primary">Shop Now</a>
+          <a href="#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+        <div class="trust-badges reveal d4">
+          <span>🏆 Professional Grade</span>
+          <span>🚚 Fast Melbourne Delivery</span>
+          <span>💅 1000+ Products</span>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal d2">
+        <img src="images/image1.webp" alt="TP Nails and Beauty Supply — professional nail products">
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP / PRODUCTS -->
+  <section id="shop" class="section shop-section">
+    <div class="container">
+      <p class="eyebrow reveal">OUR PRODUCTS</p>
+      <h2 class="section-title reveal d1">Shop Professional Nail &amp; Beauty Supplies</h2>
+      <p class="section-subtitle reveal d2">Browse our curated range of professional-grade products for nail technicians and beauty enthusiasts.</p>
+
+      <!-- Category Filter -->
+      <div class="category-filter reveal d3">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="gel-polish">Gel Polish</button>
+        <button class="filter-btn" data-filter="acrylic">Acrylic</button>
+        <button class="filter-btn" data-filter="tools">Tools &amp; Equipment</button>
+        <button class="filter-btn" data-filter="nail-art">Nail Art</button>
+        <button class="filter-btn" data-filter="accessories">Accessories</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid">
+
+        <!-- 1 -->
+        <div class="product-card reveal" data-category="gel-polish">
+          <div class="product-img-wrap">
+            <img src="images/pexels-cottonbro-3997359.jpg" alt="Gel Polish Set — 12 Colors" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Gel Polish Set — 12 Colors" data-price="28.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Gel Polish</p>
+            <h3 class="product-name">Gel Polish Set — 12 Colors</h3>
+            <div class="product-footer">
+              <span class="product-price">A$28.99</span>
+              <button class="add-to-cart-btn" data-name="Gel Polish Set — 12 Colors" data-price="28.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="product-card reveal d1" data-category="tools">
+          <div class="product-img-wrap">
+            <img src="images/pexels-rdne-7755681.jpg" alt="UV/LED Nail Lamp 48W" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="UV/LED Nail Lamp 48W" data-price="45.00">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Tools &amp; Equipment</p>
+            <h3 class="product-name">UV/LED Nail Lamp 48W</h3>
+            <div class="product-footer">
+              <span class="product-price">A$45.00</span>
+              <button class="add-to-cart-btn" data-name="UV/LED Nail Lamp 48W" data-price="45.00" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="product-card reveal d2" data-category="acrylic">
+          <div class="product-img-wrap">
+            <img src="images/pexels-kosyginl-20826840.jpg" alt="Acrylic Powder Kit — Clear/Pink/White" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Acrylic Powder Kit — Clear/Pink/White" data-price="34.50">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Acrylic</p>
+            <h3 class="product-name">Acrylic Powder Kit — Clear/Pink/White</h3>
+            <div class="product-footer">
+              <span class="product-price">A$34.50</span>
+              <button class="add-to-cart-btn" data-name="Acrylic Powder Kit — Clear/Pink/White" data-price="34.50" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="product-card reveal d3" data-category="nail-art">
+          <div class="product-img-wrap">
+            <img src="images/pexels-cottonbro-3997377.jpg" alt="Nail Art Brush Set (10pc)" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Nail Art Brush Set (10pc)" data-price="18.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Nail Art</p>
+            <h3 class="product-name">Nail Art Brush Set (10pc)</h3>
+            <div class="product-footer">
+              <span class="product-price">A$18.99</span>
+              <button class="add-to-cart-btn" data-name="Nail Art Brush Set (10pc)" data-price="18.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="product-card reveal" data-category="gel-polish">
+          <div class="product-img-wrap">
+            <img src="images/images2.webp" alt="Builder Gel — Nude Collection" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Builder Gel — Nude Collection" data-price="22.00">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Gel Polish</p>
+            <h3 class="product-name">Builder Gel — Nude Collection</h3>
+            <div class="product-footer">
+              <span class="product-price">A$22.00</span>
+              <button class="add-to-cart-btn" data-name="Builder Gel — Nude Collection" data-price="22.00" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="product-card reveal d1" data-category="tools">
+          <div class="product-img-wrap">
+            <img src="images/pexels-rdne-7755681.jpg" alt="Electric Nail Drill — Professional" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Electric Nail Drill — Professional" data-price="68.00">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Tools &amp; Equipment</p>
+            <h3 class="product-name">Electric Nail Drill — Professional</h3>
+            <div class="product-footer">
+              <span class="product-price">A$68.00</span>
+              <button class="add-to-cart-btn" data-name="Electric Nail Drill — Professional" data-price="68.00" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="product-card reveal d2" data-category="acrylic">
+          <div class="product-img-wrap">
+            <img src="images/pexels-kosyginl-20826840.jpg" alt="Acrylic Liquid Monomer 250ml" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Acrylic Liquid Monomer 250ml" data-price="19.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Acrylic</p>
+            <h3 class="product-name">Acrylic Liquid Monomer 250ml</h3>
+            <div class="product-footer">
+              <span class="product-price">A$19.99</span>
+              <button class="add-to-cart-btn" data-name="Acrylic Liquid Monomer 250ml" data-price="19.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="product-card reveal d3" data-category="nail-art">
+          <div class="product-img-wrap">
+            <img src="images/pexels-cottonbro-3997359.jpg" alt="Nail Foil Transfer Sheets (50pc)" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Nail Foil Transfer Sheets (50pc)" data-price="12.50">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Nail Art</p>
+            <h3 class="product-name">Nail Foil Transfer Sheets (50pc)</h3>
+            <div class="product-footer">
+              <span class="product-price">A$12.50</span>
+              <button class="add-to-cart-btn" data-name="Nail Foil Transfer Sheets (50pc)" data-price="12.50" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="product-card reveal" data-category="accessories">
+          <div class="product-img-wrap">
+            <img src="images/image1.webp" alt="Nail Tips — Natural (500pc)" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Nail Tips — Natural (500pc)" data-price="9.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Accessories</p>
+            <h3 class="product-name">Nail Tips — Natural (500pc)</h3>
+            <div class="product-footer">
+              <span class="product-price">A$9.99</span>
+              <button class="add-to-cart-btn" data-name="Nail Tips — Natural (500pc)" data-price="9.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="product-card reveal d1" data-category="accessories">
+          <div class="product-img-wrap">
+            <img src="images/pexels-cottonbro-3997377.jpg" alt="Cuticle Oil Pen — Rose" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Cuticle Oil Pen — Rose" data-price="8.50">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Accessories</p>
+            <h3 class="product-name">Cuticle Oil Pen — Rose</h3>
+            <div class="product-footer">
+              <span class="product-price">A$8.50</span>
+              <button class="add-to-cart-btn" data-name="Cuticle Oil Pen — Rose" data-price="8.50" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="product-card reveal d2" data-category="acrylic">
+          <div class="product-img-wrap">
+            <img src="images/pexels-kosyginl-20826840.jpg" alt="Polygel Nail Kit — Complete" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Polygel Nail Kit — Complete" data-price="52.00">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Acrylic</p>
+            <h3 class="product-name">Polygel Nail Kit — Complete</h3>
+            <div class="product-footer">
+              <span class="product-price">A$52.00</span>
+              <button class="add-to-cart-btn" data-name="Polygel Nail Kit — Complete" data-price="52.00" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="product-card reveal d3" data-category="nail-art">
+          <div class="product-img-wrap">
+            <img src="images/pexels-cottonbro-3997359.jpg" alt="Nail Stamping Plate Set" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Nail Stamping Plate Set" data-price="15.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Nail Art</p>
+            <h3 class="product-name">Nail Stamping Plate Set</h3>
+            <div class="product-footer">
+              <span class="product-price">A$15.99</span>
+              <button class="add-to-cart-btn" data-name="Nail Stamping Plate Set" data-price="15.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /product-grid -->
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why" class="section why-section">
+    <div class="container">
+      <p class="eyebrow reveal">WHY CHOOSE US</p>
+      <h2 class="section-title reveal d1">Trusted by Professionals Across Melbourne</h2>
+      <div class="why-grid">
+        <div class="why-card reveal d1">
+          <div class="why-icon">💎</div>
+          <h3>Professional Grade Quality</h3>
+          <p>Every product in our range meets the standards demanded by professional nail technicians — durable, consistent, and salon-tested.</p>
+        </div>
+        <div class="why-card reveal d2">
+          <div class="why-icon">💰</div>
+          <h3>Wholesale Prices</h3>
+          <p>We keep our prices competitive so professionals and enthusiasts alike can stock up on the supplies they need without breaking the budget.</p>
+        </div>
+        <div class="why-card reveal d3">
+          <div class="why-icon">🚚</div>
+          <h3>Fast Local Delivery</h3>
+          <p>Serving Melbourne's western suburbs and beyond — fast local delivery means you never run out of your essential nail and beauty supplies.</p>
+        </div>
+        <div class="why-card reveal d4">
+          <div class="why-icon">🎓</div>
+          <h3>Expert Support</h3>
+          <p>Our team understands the nail industry inside and out. We're here to help you choose the right products for every technique and service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <p class="eyebrow reveal">OUR PRODUCTS IN ACTION</p>
+      <h2 class="section-title reveal d1">Inspiration &amp; Products</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="images/pexels-cottonbro-3997359.jpg" alt="TP Nails and Beauty Supply — gel polish collection" loading="lazy">
+          <div class="gallery-caption">Gel Polish Collection</div>
+        </div>
+        <div class="gallery-item reveal d1">
+          <img src="images/pexels-cottonbro-3997377.jpg" alt="TP Nails and Beauty Supply — nail art tools" loading="lazy">
+          <div class="gallery-caption">Nail Art Tools</div>
+        </div>
+        <div class="gallery-item reveal d2">
+          <img src="images/pexels-kosyginl-20826840.jpg" alt="TP Nails and Beauty Supply — acrylic products" loading="lazy">
+          <div class="gallery-caption">Acrylic Products</div>
+        </div>
+        <div class="gallery-item reveal d3">
+          <img src="images/pexels-rdne-7755681.jpg" alt="TP Nails and Beauty Supply — professional tools" loading="lazy">
+          <div class="gallery-caption">Professional Tools &amp; Equipment</div>
+        </div>
+        <div class="gallery-item reveal d1">
+          <img src="images/image1.webp" alt="TP Nails and Beauty Supply — product range" loading="lazy">
+          <div class="gallery-caption">Product Range</div>
+        </div>
+        <div class="gallery-item reveal d2">
+          <img src="images/images2.webp" alt="TP Nails and Beauty Supply — beauty supplies" loading="lazy">
+          <div class="gallery-caption">Beauty Supplies</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="eyebrow reveal">ABOUT US</p>
+          <h2 class="reveal d1">Your Local Nail Supply Experts</h2>
+          <p class="reveal d2">TP Nails and Beauty Supply is a nail and beauty supply store located in Sunshine North, Victoria. The store supplies professional nail technicians and beauty enthusiasts with a wide range of nail products, tools, and beauty supplies.</p>
+          <p class="reveal d2">Conveniently located at 46A Berkshire Rd, we serve the local professional nail and beauty industry in Melbourne's western suburbs — providing everything from gel polish and acrylic systems to nail art supplies and professional tools.</p>
+          <ul class="feature-list reveal d3">
+            <li><span class="check">✓</span> Professional grade products</li>
+            <li><span class="check">✓</span> Wholesale pricing available</li>
+            <li><span class="check">✓</span> Melbourne's western suburbs</li>
+            <li><span class="check">✓</span> For pros &amp; enthusiasts</li>
+          </ul>
+        </div>
+        <div class="about-img reveal d2">
+          <img src="images/images2.webp" alt="TP Nails and Beauty Supply — store products">
+          <div class="about-badge">Sunshine North, VIC</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow reveal">VISIT US</p>
+          <h2 class="reveal d1">Get in Touch</h2>
+          <div class="contact-rows reveal d2">
+            <div class="contact-row">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Address</div>
+                <div class="contact-value">46A Berkshire Rd, Sunshine North VIC 3020</div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value"><a href="tel:0451228899">0451 228 899</a></div>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <div class="contact-label">Hours</div>
+                <div class="contact-value">Mon–Sat: Please call for current hours</div>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrap reveal d3">
+            <iframe
+              src="https://maps.google.com/maps?q=46A+Berkshire+Rd+Sunshine+North+VIC+3020&output=embed"
+              width="100%" height="280" frameborder="0" loading="lazy"
+              style="border:0; border-radius: var(--radius);"
+              title="TP Nails and Beauty Supply location">
+            </iframe>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal d2">
+          <form class="contact-form" id="contactForm">
+            <h3>Send Us a Message</h3>
+            <div class="form-group">
+              <label for="name">Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="Your email address">
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span class="req">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+          <div class="form-thanks" id="formThanks" style="display:none;">
+            <h3>Thank you!</h3>
+            <p>We have received your message and will be in touch shortly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <img src="images/LOgo.png" alt="TP Nails and Beauty Supply" style="height:60px; margin-bottom:1rem;">
+          <p class="footer-business-name">TP Nails and Beauty Supply</p>
+          <p class="footer-desc">Professional nail and beauty supplies for technicians and enthusiasts across Melbourne's western suburbs.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Product Categories</h4>
+          <ul>
+            <li><a href="#shop">Gel Polish</a></li>
+            <li><a href="#shop">Acrylic</a></li>
+            <li><a href="#shop">Tools &amp; Equipment</a></li>
+            <li><a href="#shop">Nail Art</a></li>
+            <li><a href="#shop">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <address>
+            <p>46A Berkshire Rd<br>Sunshine North VIC 3020</p>
+            <p><a href="tel:0451228899">0451 228 899</a></p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 TP Nails and Beauty Supply. All rights reserved. &nbsp;·&nbsp; <span class="footer-demo-note">Demo website — not a real store</span></p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
