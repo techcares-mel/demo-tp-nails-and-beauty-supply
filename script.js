@@ -24,7 +24,9 @@ const topBar = document.querySelector('.top-bar');
 
 function updateNavOffset() {
   const topBarH = topBar ? topBar.offsetHeight : 0;
-  mainNav.style.top = topBarH + 'px';
+  // Slide nav up as top bar scrolls away, so no gap appears above nav
+  const offset = Math.max(0, topBarH - window.scrollY);
+  mainNav.style.top = offset + 'px';
 }
 
 function handleNavScroll() {
@@ -59,6 +61,7 @@ window.addEventListener('scroll', () => {
   updateScrollProgress();
   handleNavScroll();
   handleBackToTop();
+  updateNavOffset();
 }, { passive: true });
 
 // ============================================================

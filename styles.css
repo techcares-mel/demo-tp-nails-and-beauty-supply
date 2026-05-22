@@ -1018,10 +1018,10 @@ h1, h2, h3, h4 {
    FOOTER
    ============================================================ */
 .footer {
-  background: #1a1208;
-  border-top: 1px solid rgba(0,0,0,0.15);
+  background: #ede5d5;
+  border-top: 1px solid var(--border);
   padding: 4rem 0 0;
-  color: #f0e8d6;
+  color: var(--text);
 }
 .footer .footer-business-name,
 .footer .footer-col h4,
@@ -1030,10 +1030,10 @@ h1, h2, h3, h4 {
 .footer .footer-col address a,
 .footer .footer-desc,
 .footer-bottom p {
-  color: #c9b99a;
+  color: var(--text-muted);
 }
-.footer .footer-business-name { color: #f0e8d6; }
-.footer .footer-col h4 { color: #f0e8d6; }
+.footer .footer-business-name { color: var(--text); }
+.footer .footer-col h4 { color: var(--text); }
 .footer .footer-col ul li a:hover,
 .footer .footer-col address a { color: var(--accent); }
 
@@ -1098,6 +1098,7 @@ h1, h2, h3, h4 {
 
 .footer-bottom {
   border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.04);
   padding: 1.25rem 1.5rem;
   text-align: center;
 }
@@ -1218,6 +1219,17 @@ h1, h2, h3, h4 {
 .nav-dropdown-menu a:hover {
   background: var(--accent-glow);
   color: var(--accent);
+}
+
+/* Invisible bridge: fills the gap between trigger and menu so hover isn't lost */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  right: -16px;
+  height: 0.85rem;
+  z-index: 199;
 }
 
 /* ============================================================
