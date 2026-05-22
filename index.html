@@ -33,7 +33,19 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <a href="#home" class="nav-link">Home</a>
-        <a href="#shop" class="nav-link">Shop</a>
+        <div class="nav-dropdown">
+          <a href="#shop" class="nav-link nav-dropdown-trigger">Nail</a>
+          <div class="nav-dropdown-menu">
+            <a href="#shop" class="nav-filter-link" data-filter="gel-polish">Gel Polish</a>
+            <a href="#shop" class="nav-filter-link" data-filter="acrylic">Acrylic Systems</a>
+            <a href="#shop" class="nav-filter-link" data-filter="nail-art">Nail Art</a>
+            <a href="#shop" class="nav-filter-link" data-filter="tools">Tools &amp; Equipment</a>
+            <a href="#shop" class="nav-filter-link" data-filter="accessories">Accessories</a>
+          </div>
+        </div>
+        <a href="#shop" class="nav-link nav-filter-link" data-filter="hair">Hair</a>
+        <a href="#shop" class="nav-link nav-filter-link" data-filter="beauty">Beauty</a>
+        <a href="#shop" class="nav-link nav-filter-link" data-filter="salon">Salon Supplies</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
       </ul>
@@ -53,7 +65,10 @@
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">✕</button>
     <a href="#home" class="mobile-link">Home</a>
-    <a href="#shop" class="mobile-link">Shop</a>
+    <a href="#shop" class="mobile-link">Nail</a>
+    <a href="#shop" class="mobile-link mobile-filter-link" data-filter="hair">Hair</a>
+    <a href="#shop" class="mobile-link mobile-filter-link" data-filter="beauty">Beauty</a>
+    <a href="#shop" class="mobile-link mobile-filter-link" data-filter="salon">Salon Supplies</a>
     <a href="#about" class="mobile-link">About</a>
     <a href="#contact" class="mobile-link">Contact</a>
   </div>
@@ -98,6 +113,58 @@
     </div>
   </section>
 
+  <!-- PROMO BANNERS -->
+  <section class="promo-section">
+    <div class="container">
+      <div class="promo-large">
+        <div class="promo-banner" style="background-image: url('images/pexels-cottonbro-3997359.jpg')">
+          <div class="promo-overlay"></div>
+          <div class="promo-content">
+            <span class="promo-eyebrow">New Collection</span>
+            <h3>Professional Gel Polish Systems</h3>
+            <p>100+ shades from leading brands</p>
+            <a href="#shop" class="btn btn-primary btn-sm promo-filter-btn" data-filter="gel-polish">Shop Gel Polish</a>
+          </div>
+        </div>
+        <div class="promo-banner" style="background-image: url('images/pexels-rdne-7755681.jpg')">
+          <div class="promo-overlay"></div>
+          <div class="promo-content">
+            <span class="promo-eyebrow">Professional Grade</span>
+            <h3>Tools &amp; Equipment</h3>
+            <p>UV lamps, drills, brushes &amp; more</p>
+            <a href="#shop" class="btn btn-primary btn-sm promo-filter-btn" data-filter="tools">Shop Tools</a>
+          </div>
+        </div>
+      </div>
+      <div class="promo-strip">
+        <div class="promo-strip-item">
+          <span class="strip-icon">✨</span>
+          <div>
+            <strong>New Arrivals</strong>
+            <span>Fresh stock added weekly</span>
+          </div>
+          <a href="#shop" class="strip-link">View →</a>
+        </div>
+        <div class="promo-strip-item">
+          <span class="strip-icon">🔥</span>
+          <div>
+            <strong>Best Sellers</strong>
+            <span>Most popular products</span>
+          </div>
+          <a href="#shop" class="strip-link">View →</a>
+        </div>
+        <div class="promo-strip-item">
+          <span class="strip-icon">🎁</span>
+          <div>
+            <strong>Bundle Deals</strong>
+            <span>Save on starter kits</span>
+          </div>
+          <a href="#shop" class="strip-link">View →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SHOP / PRODUCTS -->
   <section id="shop" class="section shop-section">
     <div class="container">
@@ -113,6 +180,9 @@
         <button class="filter-btn" data-filter="tools">Tools &amp; Equipment</button>
         <button class="filter-btn" data-filter="nail-art">Nail Art</button>
         <button class="filter-btn" data-filter="accessories">Accessories</button>
+        <button class="filter-btn" data-filter="hair">Hair</button>
+        <button class="filter-btn" data-filter="beauty">Beauty</button>
+        <button class="filter-btn" data-filter="salon">Salon Supplies</button>
       </div>
 
       <!-- Product Grid -->
@@ -322,7 +392,125 @@
           </div>
         </div>
 
+        <!-- 13 -->
+        <div class="product-card reveal" data-category="hair">
+          <div class="product-img-wrap">
+            <img src="images/pexels-rdne-7755681.jpg" alt="Professional Hair Color — 50 Shades" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Professional Hair Color — 50 Shades" data-price="24.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Hair</p>
+            <h3 class="product-name">Professional Hair Color — 50 Shades</h3>
+            <div class="product-footer">
+              <span class="product-price">A$24.99</span>
+              <button class="add-to-cart-btn" data-name="Professional Hair Color — 50 Shades" data-price="24.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="product-card reveal d1" data-category="hair">
+          <div class="product-img-wrap">
+            <img src="images/pexels-cottonbro-3997377.jpg" alt="Keratin Treatment Kit" loading="lazy">
+            <div class="product-badge">HOT</div>
+            <button class="quick-add" data-name="Keratin Treatment Kit" data-price="48.00">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Hair</p>
+            <h3 class="product-name">Keratin Treatment Kit</h3>
+            <div class="product-footer">
+              <span class="product-price">A$48.00</span>
+              <button class="add-to-cart-btn" data-name="Keratin Treatment Kit" data-price="48.00" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="product-card reveal d2" data-category="beauty">
+          <div class="product-img-wrap">
+            <img src="images/images2.webp" alt="Professional Wax Kit" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Professional Wax Kit" data-price="35.00">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Beauty</p>
+            <h3 class="product-name">Professional Wax Kit</h3>
+            <div class="product-footer">
+              <span class="product-price">A$35.00</span>
+              <button class="add-to-cart-btn" data-name="Professional Wax Kit" data-price="35.00" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="product-card reveal d3" data-category="beauty">
+          <div class="product-img-wrap">
+            <img src="images/image1.webp" alt="Facial Care Set — Salon Grade" loading="lazy">
+            <div class="product-badge">NEW</div>
+            <button class="quick-add" data-name="Facial Care Set — Salon Grade" data-price="29.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Beauty</p>
+            <h3 class="product-name">Facial Care Set — Salon Grade</h3>
+            <div class="product-footer">
+              <span class="product-price">A$29.99</span>
+              <button class="add-to-cart-btn" data-name="Facial Care Set — Salon Grade" data-price="29.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="product-card reveal" data-category="salon">
+          <div class="product-img-wrap">
+            <img src="images/pexels-cottonbro-3997359.jpg" alt="Nitrile Gloves — 100pk" loading="lazy">
+            <button class="quick-add" data-name="Nitrile Gloves — 100pk" data-price="12.99">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Salon Supplies</p>
+            <h3 class="product-name">Nitrile Gloves — 100pk</h3>
+            <div class="product-footer">
+              <span class="product-price">A$12.99</span>
+              <button class="add-to-cart-btn" data-name="Nitrile Gloves — 100pk" data-price="12.99" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="product-card reveal d1" data-category="salon">
+          <div class="product-img-wrap">
+            <img src="images/pexels-kosyginl-20826840.jpg" alt="Professional Sanitizer 500ml" loading="lazy">
+            <button class="quick-add" data-name="Professional Sanitizer 500ml" data-price="8.50">+ Quick Add</button>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Salon Supplies</p>
+            <h3 class="product-name">Professional Sanitizer 500ml</h3>
+            <div class="product-footer">
+              <span class="product-price">A$8.50</span>
+              <button class="add-to-cart-btn" data-name="Professional Sanitizer 500ml" data-price="8.50" aria-label="Add to cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
       </div><!-- /product-grid -->
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section class="section brands-section">
+    <div class="container">
+      <p class="eyebrow reveal">TRUSTED BRANDS</p>
+      <h2 class="section-title reveal d1">Top Brands We Carry</h2>
+      <div class="brands-track reveal d2">
+        <div class="brand-item">OPI</div>
+        <div class="brand-item">Gelish</div>
+        <div class="brand-item">DND</div>
+        <div class="brand-item">AEON</div>
+        <div class="brand-item">Phoenix</div>
+        <div class="brand-item">IBD</div>
+        <div class="brand-item">CND</div>
+        <div class="brand-item">Orly</div>
+      </div>
     </div>
   </section>
 
@@ -508,7 +696,9 @@
             <li><a href="#shop">Acrylic</a></li>
             <li><a href="#shop">Tools &amp; Equipment</a></li>
             <li><a href="#shop">Nail Art</a></li>
-            <li><a href="#shop">Accessories</a></li>
+            <li><a href="#shop">Hair</a></li>
+            <li><a href="#shop">Beauty</a></li>
+            <li><a href="#shop">Salon Supplies</a></li>
           </ul>
         </div>
         <div class="footer-col">

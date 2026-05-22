@@ -267,6 +267,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Nav filter links (Nail dropdown, Hair, Beauty, Salon Supplies)
+  function applyFilter(filter) {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    const targetBtn = [...filterBtns].find(b => b.dataset.filter === filter);
+    if (targetBtn) targetBtn.classList.add('active');
+    productCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  document.querySelectorAll('.nav-filter-link, .mobile-filter-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const filter = link.dataset.filter;
+      if (filter) {
+        e.preventDefault();
+        closeMobileMenu();
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => applyFilter(filter), 400);
+      }
+    });
+  });
+
+  // Promo banner Shop Now buttons
+  document.querySelectorAll('.promo-filter-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const filter = btn.dataset.filter;
+      document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => applyFilter(filter), 500);
+    });
+  });
+
   // Initial state
   updateScrollProgress();
   handleNavScroll();
