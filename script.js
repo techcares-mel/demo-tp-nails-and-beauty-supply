@@ -21,11 +21,13 @@ function updateScrollProgress() {
 // ============================================================
 const mainNav = document.getElementById('mainNav');
 const topBar = document.querySelector('.top-bar');
+const promoBanner = document.querySelector('.promo-banner');
 
 function updateNavOffset() {
   const topBarH = topBar ? topBar.offsetHeight : 0;
-  // Slide nav up as top bar scrolls away, so no gap appears above nav
-  const offset = Math.max(0, topBarH - window.scrollY);
+  const promoH = promoBanner ? promoBanner.offsetHeight : 0;
+  const totalAbove = topBarH + promoH;
+  const offset = Math.max(0, totalAbove - window.scrollY);
   mainNav.style.top = offset + 'px';
 }
 
