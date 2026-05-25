@@ -21,7 +21,7 @@ function updateScrollProgress() {
 // ============================================================
 const mainNav = document.getElementById('mainNav');
 const topBar = document.querySelector('.top-bar');
-const promoBanner = document.querySelector('.promo-banner');
+const promoBanner = document.querySelector('.ticker-banner');
 const heroSection = document.getElementById('home');
 
 function updateNavOffset() {

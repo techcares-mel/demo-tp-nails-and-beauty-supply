@@ -96,9 +96,9 @@ h1, h2, h3, h4 {
    TOP BAR
    ============================================================ */
 /* ============================================================
-   PROMO BANNER
+   TICKER BANNER (scrolling promo bar)
    ============================================================ */
-.promo-banner {
+.ticker-banner {
   background: #1a1206;
   border-top: 1px solid rgba(172, 135, 62, 0.3);
   border-bottom: 1px solid rgba(172, 135, 62, 0.3);
@@ -112,8 +112,8 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-.promo-banner::before,
-.promo-banner::after {
+.ticker-banner::before,
+.ticker-banner::after {
   content: '';
   position: absolute;
   top: 0; bottom: 0;
@@ -121,16 +121,16 @@ h1, h2, h3, h4 {
   z-index: 2;
   pointer-events: none;
 }
-.promo-banner::before {
+.ticker-banner::before {
   left: 0;
-  background: linear-gradient(to right, #0f0f0f, transparent);
+  background: linear-gradient(to right, #1a1206, transparent);
 }
-.promo-banner::after {
+.ticker-banner::after {
   right: 0;
-  background: linear-gradient(to left, #0f0f0f, transparent);
+  background: linear-gradient(to left, #1a1206, transparent);
 }
 
-.promo-track {
+.ticker-track {
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -138,7 +138,7 @@ h1, h2, h3, h4 {
   animation: promo-ticker 30s linear infinite;
 }
 
-.promo-banner:hover .promo-track {
+.ticker-banner:hover .ticker-track {
   animation-play-state: paused;
 }
 
