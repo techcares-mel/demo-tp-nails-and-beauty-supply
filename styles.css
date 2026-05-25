@@ -117,8 +117,10 @@ h1, h2, h3, h4 {
   line-height: 1;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 201;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 499;
   width: 100%;
 }
 
@@ -215,8 +217,11 @@ h1, h2, h3, h4 {
   color: #1a1208;
   padding: 0.6rem 1.5rem;
   font-family: 'Inter', sans-serif;
-  position: relative;
-  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
 }
 
 .top-bar-inner {
@@ -278,7 +283,7 @@ h1, h2, h3, h4 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 498;
   transition: background 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease;
   /* offset for top bar — updated via JS */
 }

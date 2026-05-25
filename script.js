@@ -28,8 +28,12 @@ function updateNavOffset() {
   const topBarH = topBar ? topBar.offsetHeight : 0;
   const promoH = promoBanner ? promoBanner.offsetHeight : 0;
   const totalAbove = topBarH + promoH;
-  const offset = Math.max(0, totalAbove - window.scrollY);
-  mainNav.style.top = offset + 'px';
+
+  // Keep ticker pinned just below the top-bar
+  if (promoBanner) promoBanner.style.top = topBarH + 'px';
+
+  // Keep nav pinned just below the ticker
+  mainNav.style.top = totalAbove + 'px';
 
   // Push hero content to start just below the nav
   if (heroSection) {
