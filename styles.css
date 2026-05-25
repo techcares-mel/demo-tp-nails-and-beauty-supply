@@ -102,7 +102,8 @@ h1, h2, h3, h4 {
   background: #0f0f0f;
   border-bottom: 1px solid rgba(172, 135, 62, 0.25);
   overflow: hidden;
-  padding: 1.5px 0;
+  height: 20px;
+  line-height: 1;
   display: flex;
   align-items: center;
   position: relative;
@@ -132,6 +133,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  line-height: 1;
   animation: promo-ticker 30s linear infinite;
 }
 
@@ -151,6 +153,7 @@ h1, h2, h3, h4 {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 400;
+  line-height: 1;
   color: #cccccc;
   letter-spacing: 0.03em;
   padding: 0 6px;
