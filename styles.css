@@ -20,6 +20,16 @@
 }
 
 /* ============================================================
+   ICON SYSTEM — monochrome solid, currentColor
+   ============================================================ */
+svg.icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* ============================================================
    RESET & BASE
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -167,8 +177,15 @@ h1, h2, h3, h4 {
 }
 
 .promo-icon {
-  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
   flex-shrink: 0;
+}
+.promo-icon svg.icon {
+  width: 1.1em;
+  height: 1.1em;
 }
 
 .promo-code {
@@ -221,19 +238,17 @@ h1, h2, h3, h4 {
 }
 
 .top-bar-icon {
-  width: 26px;
-  height: 26px;
-  flex-shrink: 0;
-  border-radius: 7px;
-  overflow: hidden;
+  width: 20px;
+  height: 20px;
   display: inline-flex;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: rgba(26, 18, 8, 0.72);
 }
-
-.top-bar-icon svg {
+.top-bar-icon svg.icon {
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 .top-bar-divider {
@@ -319,7 +334,15 @@ h1, h2, h3, h4 {
   gap: 0.25rem;
   padding: 0.5rem;
 }
-.cart-icon { font-size: 1.4rem; }
+.cart-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text);
+}
+.cart-icon svg.icon {
+  width: 22px;
+  height: 22px;
+}
 .cart-badge {
   position: absolute;
   top: 0;
@@ -621,6 +644,18 @@ h1, h2, h3, h4 {
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
+.hero-eyebrow svg.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  margin-right: 4px;
+}
+.trust-badges span svg.icon {
+  width: 15px;
+  height: 15px;
+  color: var(--accent);
+  margin-right: 5px;
+}
 
 .hero-text h1 {
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
@@ -856,17 +891,20 @@ h1, h2, h3, h4 {
 }
 
 .why-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
-  background: none;
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: var(--accent-glow);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  overflow: hidden;
+  color: var(--accent);
 }
-.why-icon svg { width: 100%; height: 100%; display: block; }
+.why-icon svg.icon {
+  width: 34px;
+  height: 34px;
+}
 
 .why-card h3 {
   font-size: 1.1rem;
@@ -1066,15 +1104,18 @@ h1, h2, h3, h4 {
 .contact-icon {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
-  background: none;
+  border-radius: 12px;
+  background: var(--accent-glow);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  overflow: hidden;
+  color: var(--accent);
 }
-.contact-icon svg { width: 100%; height: 100%; display: block; }
+.contact-icon svg.icon {
+  width: 22px;
+  height: 22px;
+}
 
 .contact-label {
   font-family: 'Inter', sans-serif;
@@ -1495,13 +1536,20 @@ h1, h2, h3, h4 {
 }
 
 .strip-icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  border-radius: 10px;
-  overflow: hidden;
+  color: var(--accent);
 }
-.strip-icon svg { width: 100%; height: 100%; display: block; }
+.strip-icon svg.icon {
+  width: 22px;
+  height: 22px;
+}
 
 .promo-strip-item div {
   flex: 1;

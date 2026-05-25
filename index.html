@@ -9,9 +9,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SVG ICON SPRITE — hidden. Use: <svg class="icon" aria-hidden="true"><use href="#ic-name"/></svg>
+     Style: solid monochrome · currentColor fill · 24×24 viewBox
+════════════════════════════════════════════════════════════ -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="ic-pin" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></symbol>
+    <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.61 21 3 14.39 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.26 1.02l-2.19 2.2z" fill="currentColor"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23L12.5 13V7z" fill="currentColor"/></symbol>
+    <symbol id="ic-percent" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9A2 2 0 0011 2H4c-1.1 0-2 .9-2 2v7a2 2 0 00.59 1.41l9 9a2 2 0 002.82 0l7-7a2 2 0 000-2.82zM7.5 7C6.67 7 6 6.33 6 5.5S6.67 4 7.5 4 9 4.67 9 5.5 8.33 7 7.5 7zm8 5c-.83 0-1.5-.67-1.5-1.5S14.67 9 15.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM9 15l6-6" fill="currentColor"/></symbol>
+    <symbol id="ic-truck" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></symbol>
+    <symbol id="ic-gift" viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.28.18-.54.18-.82C18 3.36 16.64 2 15 2c-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.36 2 6 3.36 6 5c0 .28.11.54.18.82H4c-1.1 0-2 .9-2 2v2h20V8c0-1.1-.9-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4v-3h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z" fill="currentColor"/></symbol>
+    <symbol id="ic-star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/></symbol>
+    <symbol id="ic-flame" viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8c0-5.39-2.59-10.2-6.5-13.33zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z" fill="currentColor"/></symbol>
+    <symbol id="ic-bundle" viewBox="0 0 24 24"><path d="M11.99 2L2 7l10 5 10-5-10.01-5zM2 17l10 5 10-5-10-5-10 5zm0-5l10 5 10-5-10-5-10 5z" fill="currentColor"/></symbol>
+    <symbol id="ic-diamond" viewBox="0 0 24 24"><path d="M19 3H5L2 9l10 13L22 9l-3-6zm-2.38 4l1.35 2H5.96l1.38-2h9.28zM12 20.53L6.54 13h10.92L12 20.53z" fill="currentColor"/></symbol>
+    <symbol id="ic-tag" viewBox="0 0 24 24"><path d="M17.63 5.84C17.27 5.33 16.67 5 16 5H5c-1.1 0-2 .89-2 2v10c0 1.11.9 2 2 2h11c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z" fill="currentColor"/></symbol>
+    <symbol id="ic-headset" viewBox="0 0 24 24"><path d="M12 1C7.03 1 3 5.03 3 10v3c0 1.1.9 2 2 2h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1H5v-1c0-3.86 3.14-7 7-7s7 3.14 7 7v1h-1c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1c1.1 0 2-.9 2-2v-3c0-4.97-4.03-9-9-9zm-2 16c-.55 0-1 .45-1 1 0 1.66 1.34 3 3 3s3-1.34 3-3c0-.55-.45-1-1-1h-2z" fill="currentColor"/></symbol>
+    <symbol id="ic-cart" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 5.9 17 7 17h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.5 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/></symbol>
+    <symbol id="ic-trophy" viewBox="0 0 24 24"><path d="M7 2v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V17H7v2h10v-2h-4v-2.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 11.63 21 9.55 21 7V6c0-1.1-.9-2-2-2h-2V2H7zm10 4v3c0 2.21-1.79 4-4 4S9 11.21 9 9V6h8zM5 8V7h2v2.82C5.84 9.4 5 8.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z" fill="currentColor"/></symbol>
+    <symbol id="ic-sparkle" viewBox="0 0 24 24"><path d="M12 1l2.5 7.5L22 11l-7.5 2.5L12 21l-2.5-7.5L2 11l7.5-2.5L12 1z" fill="currentColor"/></symbol>
+    <symbol id="ic-nail" viewBox="0 0 24 24"><path d="M13 2h-2c-.55 0-1 .45-1 1v1H9c-.55 0-1 .45-1 1v1H7c-1.1 0-2 .9-2 2v11c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V8c0-1.1-.9-2-2-2h-1V5c0-.55-.45-1-1-1h-1V3c0-.55-.45-1-1-1zm4 6v11H7V8h10zm-3-2h-4V5h4v1z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
 
   <!-- DEMO Watermark -->
   <div class="demo-watermark">DEMO</div>
@@ -23,23 +48,17 @@
   <div class="top-bar">
     <div class="top-bar-inner">
       <span class="top-bar-item">
-        <span class="top-bar-icon">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#fff"/><path d="M20 8C15.58 8 12 11.58 12 16C12 22 20 32 20 32C20 32 28 22 28 16C28 11.58 24.42 8 20 8Z" fill="#1B2E78"/><circle cx="20" cy="16" r="4" fill="#fff"/></svg>
-        </span>
+        <span class="top-bar-icon"><svg class="icon" aria-hidden="true"><use href="#ic-pin"/></svg></span>
         46A Berkshire Rd, Sunshine North VIC 3020
       </span>
       <span class="top-bar-divider"></span>
       <span class="top-bar-item">
-        <span class="top-bar-icon">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#fff"/><path d="M15 9C13.34 9 12 10.34 12 12C12 22.49 20.51 31 31 31C32.66 31 34 29.66 34 28V24.93C34 24.14 33.49 23.42 32.73 23.16L28.73 21.79C28.05 21.55 27.3 21.73 26.81 22.26L25.24 23.98C22.89 22.63 20.38 20.11 19.02 17.76L20.74 16.19C21.27 15.7 21.45 14.95 21.21 14.27L19.84 10.27C19.58 9.51 18.86 9 18.07 9H15Z" fill="#1B2E78"/></svg>
-        </span>
+        <span class="top-bar-icon"><svg class="icon" aria-hidden="true"><use href="#ic-phone"/></svg></span>
         0451 228 899
       </span>
       <span class="top-bar-divider"></span>
       <span class="top-bar-item">
-        <span class="top-bar-icon">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#fff"/><circle cx="20" cy="21" r="11" stroke="#1B2E78" stroke-width="3" fill="none"/><path d="M20 14V21L25 26" stroke="#1B2E78" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
+        <span class="top-bar-icon"><svg class="icon" aria-hidden="true"><use href="#ic-clock"/></svg></span>
         Mon–Sat: Call for hours
       </span>
     </div>
@@ -49,18 +68,18 @@
   <div class="ticker-banner" role="marquee" aria-label="Current promotions">
     <div class="ticker-track">
       <!-- SET 1 -->
-      <span class="promo-item"><span class="promo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle"><rect width="40" height="40" rx="9" fill="#FFD740"/><circle cx="14" cy="14" r="5" fill="#1B2E78"/><circle cx="26" cy="26" r="5" fill="#1B2E78"/><path d="M10 30L30 10" stroke="#F54040" stroke-width="4" stroke-linecap="round"/></svg></span> New customers get <strong>10% OFF</strong> — use code <span class="promo-code">WELCOME10</span></span>
+      <span class="promo-item"><span class="promo-icon"><svg class="icon" aria-hidden="true"><use href="#ic-percent"/></svg></span> New customers get <strong>10% OFF</strong> — use code <span class="promo-code">WELCOME10</span></span>
       <span class="promo-sep">✦</span>
-      <span class="promo-item"><span class="promo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle"><rect width="40" height="40" rx="9" fill="#4DC3F5"/><rect x="2" y="13" width="22" height="15" rx="3" fill="#1B2E78"/><path d="M24 18h9a2 2 0 012 2v8H24V18z" fill="#1B2E78"/><rect x="25" y="19" width="7" height="6" rx="1" fill="#4DC3F5"/><circle cx="9" cy="30" r="4" fill="#FFD740"/><circle cx="9" cy="30" r="1.5" fill="#1B2E78"/><circle cx="29" cy="30" r="4" fill="#FFD740"/><circle cx="29" cy="30" r="1.5" fill="#1B2E78"/></svg></span> <strong>FREE SHIPPING</strong> on orders over <strong>$300</strong></span>
+      <span class="promo-item"><span class="promo-icon"><svg class="icon" aria-hidden="true"><use href="#ic-truck"/></svg></span> <strong>FREE SHIPPING</strong> on orders over <strong>$300</strong></span>
       <span class="promo-sep">✦</span>
-      <span class="promo-item"><span class="promo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle"><rect width="40" height="40" rx="9" fill="#F54040"/><rect x="5" y="20" width="30" height="15" rx="3" fill="#1B2E78"/><rect x="4" y="14" width="32" height="7" rx="2" fill="#1B2E78"/><rect x="17" y="14" width="6" height="21" fill="#FFD740"/><path d="M20 14C19 11 13 9 13 12C13 15 20 14 20 14Z" fill="#FFD740"/><path d="M20 14C21 11 27 9 27 12C27 15 20 14 20 14Z" fill="#FFD740"/><circle cx="20" cy="14" r="3.5" fill="#F54040"/></svg></span> Spend <strong>$500+</strong> and receive a <strong>FREE GIFT</strong> with your order</span>
+      <span class="promo-item"><span class="promo-icon"><svg class="icon" aria-hidden="true"><use href="#ic-gift"/></svg></span> Spend <strong>$500+</strong> and receive a <strong>FREE GIFT</strong> with your order</span>
       <span class="promo-sep">✦</span>
       <!-- SET 2 (duplicate for seamless loop) -->
-      <span class="promo-item"><span class="promo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle"><rect width="40" height="40" rx="9" fill="#FFD740"/><circle cx="14" cy="14" r="5" fill="#1B2E78"/><circle cx="26" cy="26" r="5" fill="#1B2E78"/><path d="M10 30L30 10" stroke="#F54040" stroke-width="4" stroke-linecap="round"/></svg></span> New customers get <strong>10% OFF</strong> — use code <span class="promo-code">WELCOME10</span></span>
+      <span class="promo-item"><span class="promo-icon"><svg class="icon" aria-hidden="true"><use href="#ic-percent"/></svg></span> New customers get <strong>10% OFF</strong> — use code <span class="promo-code">WELCOME10</span></span>
       <span class="promo-sep">✦</span>
-      <span class="promo-item"><span class="promo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle"><rect width="40" height="40" rx="9" fill="#4DC3F5"/><rect x="2" y="13" width="22" height="15" rx="3" fill="#1B2E78"/><path d="M24 18h9a2 2 0 012 2v8H24V18z" fill="#1B2E78"/><rect x="25" y="19" width="7" height="6" rx="1" fill="#4DC3F5"/><circle cx="9" cy="30" r="4" fill="#FFD740"/><circle cx="9" cy="30" r="1.5" fill="#1B2E78"/><circle cx="29" cy="30" r="4" fill="#FFD740"/><circle cx="29" cy="30" r="1.5" fill="#1B2E78"/></svg></span> <strong>FREE SHIPPING</strong> on orders over <strong>$300</strong></span>
+      <span class="promo-item"><span class="promo-icon"><svg class="icon" aria-hidden="true"><use href="#ic-truck"/></svg></span> <strong>FREE SHIPPING</strong> on orders over <strong>$300</strong></span>
       <span class="promo-sep">✦</span>
-      <span class="promo-item"><span class="promo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:1em;height:1em;vertical-align:middle"><rect width="40" height="40" rx="9" fill="#F54040"/><rect x="5" y="20" width="30" height="15" rx="3" fill="#1B2E78"/><rect x="4" y="14" width="32" height="7" rx="2" fill="#1B2E78"/><rect x="17" y="14" width="6" height="21" fill="#FFD740"/><path d="M20 14C19 11 13 9 13 12C13 15 20 14 20 14Z" fill="#FFD740"/><path d="M20 14C21 11 27 9 27 12C27 15 20 14 20 14Z" fill="#FFD740"/><circle cx="20" cy="14" r="3.5" fill="#F54040"/></svg></span> Spend <strong>$500+</strong> and receive a <strong>FREE GIFT</strong> with your order</span>
+      <span class="promo-item"><span class="promo-icon"><svg class="icon" aria-hidden="true"><use href="#ic-gift"/></svg></span> Spend <strong>$500+</strong> and receive a <strong>FREE GIFT</strong> with your order</span>
       <span class="promo-sep">✦</span>
     </div>
   </div>
@@ -91,7 +110,7 @@
       </ul>
       <div class="nav-actions">
         <button class="cart-btn" id="cartBtn" aria-label="Open cart">
-          <span class="cart-icon">🛒</span>
+          <span class="cart-icon"><svg class="icon" aria-hidden="true"><use href="#ic-cart"/></svg></span>
           <span class="cart-badge" id="cartBadge">0</span>
         </button>
         <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -140,7 +159,7 @@
     </video>
     <div class="hero-inner">
       <div class="hero-text">
-        <span class="hero-eyebrow reveal">✨ Professional Nail &amp; Beauty Supplies</span>
+        <span class="hero-eyebrow reveal"><svg class="icon" aria-hidden="true"><use href="#ic-sparkle"/></svg> Professional Nail &amp; Beauty Supplies</span>
         <h1 class="reveal d1">Your Premier <em>Nail Supply</em> Store in Melbourne</h1>
         <p class="hero-desc reveal d2">TP Nails and Beauty Supply stocks professional nail technicians and beauty enthusiasts with a wide range of nail products, tools, and beauty supplies — conveniently located in Sunshine North, Melbourne's western suburbs.</p>
         <div class="hero-btns reveal d3">
@@ -148,9 +167,9 @@
           <a href="#contact" class="btn btn-outline">Contact Us</a>
         </div>
         <div class="trust-badges reveal d4">
-          <span>🏆 Professional Grade</span>
-          <span>🚚 Fast Melbourne Delivery</span>
-          <span>💅 1000+ Products</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#ic-trophy"/></svg> Professional Grade</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#ic-truck"/></svg> Fast Melbourne Delivery</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#ic-nail"/></svg> 1000+ Products</span>
         </div>
       </div>
     </div>
@@ -181,7 +200,7 @@
       </div>
       <div class="promo-strip">
         <div class="promo-strip-item">
-          <span class="strip-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#1B2E78"/><path d="M20 6L22 17H34L25 24L28 35L20 29L12 35L15 24L6 17H18Z" fill="#FFD740"/></svg></span>
+          <span class="strip-icon"><svg class="icon" aria-hidden="true"><use href="#ic-star"/></svg></span>
           <div>
             <strong>New Arrivals</strong>
             <span>Fresh stock added weekly</span>
@@ -189,7 +208,7 @@
           <a href="#shop" class="strip-link">View →</a>
         </div>
         <div class="promo-strip-item">
-          <span class="strip-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#F54040"/><path d="M20 5C24 12 28 17 28 23C28 29 24 35 20 35C16 35 12 29 12 23C12 17 16 12 20 5Z" fill="#FFD740"/><path d="M20 23C21.5 25 22 28 20 30.5C18 28 18.5 25 20 23Z" fill="#F54040"/></svg></span>
+          <span class="strip-icon"><svg class="icon" aria-hidden="true"><use href="#ic-flame"/></svg></span>
           <div>
             <strong>Best Sellers</strong>
             <span>Most popular products</span>
@@ -197,7 +216,7 @@
           <a href="#shop" class="strip-link">View →</a>
         </div>
         <div class="promo-strip-item">
-          <span class="strip-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#5CC862"/><rect x="8" y="18" width="24" height="17" rx="3" fill="#1B2E78"/><rect x="6" y="12" width="28" height="7" rx="2" fill="#1B2E78"/><rect x="17" y="12" width="6" height="23" fill="#FFD740"/><path d="M20 12C19 9 13 7 13 10C13 13 20 12 20 12Z" fill="#FFD740"/><path d="M20 12C21 9 27 7 27 10C27 13 20 12 20 12Z" fill="#FFD740"/><circle cx="20" cy="12" r="3" fill="#5CC862"/></svg></span>
+          <span class="strip-icon"><svg class="icon" aria-hidden="true"><use href="#ic-bundle"/></svg></span>
           <div>
             <strong>Bundle Deals</strong>
             <span>Save on starter kits</span>
@@ -564,22 +583,22 @@
       <h2 class="section-title reveal d1">Trusted by Professionals Across Melbourne</h2>
       <div class="why-grid">
         <div class="why-card reveal d1">
-          <div class="why-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#4DC3F5"/><polygon points="20,5 35,18 20,35 5,18" fill="#1B2E78"/><polygon points="20,5 35,18 5,18" fill="#F54040"/><polygon points="20,12 29,18 20,29 11,18" fill="#4DC3F5"/></svg></div>
+          <div class="why-icon"><svg class="icon" aria-hidden="true"><use href="#ic-diamond"/></svg></div>
           <h3>Professional Grade Quality</h3>
           <p>Every product in our range meets the standards demanded by professional nail technicians — durable, consistent, and salon-tested.</p>
         </div>
         <div class="why-card reveal d2">
-          <div class="why-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#5CC862"/><path d="M7 7H22L33 19L20 33H7V7Z" fill="#1B2E78"/><circle cx="13" cy="13" r="3" fill="#5CC862"/><line x1="20" y1="15" x2="20" y2="26" stroke="#FFD740" stroke-width="2.5" stroke-linecap="round"/><path d="M17 17.5C17 16 20 16 20 16C23 16 23 18 20 19.5C17 21 17 23 20 23.5C23 24 23 22.5 23 22.5" stroke="#FFD740" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="why-icon"><svg class="icon" aria-hidden="true"><use href="#ic-tag"/></svg></div>
           <h3>Wholesale Prices</h3>
           <p>We keep our prices competitive so professionals and enthusiasts alike can stock up on the supplies they need without breaking the budget.</p>
         </div>
         <div class="why-card reveal d3">
-          <div class="why-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#4DC3F5"/><rect x="2" y="13" width="22" height="15" rx="3" fill="#1B2E78"/><path d="M24 18h9a2 2 0 012 2v8H24V18z" fill="#1B2E78"/><rect x="25" y="19" width="7" height="6" rx="1" fill="#4DC3F5"/><circle cx="9" cy="30" r="4" fill="#FFD740"/><circle cx="9" cy="30" r="1.5" fill="#1B2E78"/><circle cx="29" cy="30" r="4" fill="#FFD740"/><circle cx="29" cy="30" r="1.5" fill="#1B2E78"/></svg></div>
+          <div class="why-icon"><svg class="icon" aria-hidden="true"><use href="#ic-truck"/></svg></div>
           <h3>Fast Local Delivery</h3>
           <p>Serving Melbourne's western suburbs and beyond — fast local delivery means you never run out of your essential nail and beauty supplies.</p>
         </div>
         <div class="why-card reveal d4">
-          <div class="why-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#1B2E78"/><path d="M20 8L36 16L20 24L4 16Z" fill="#FFD740"/><path d="M13 19.5V27C13 29.5 16.5 32 20 32C23.5 32 27 29.5 27 27V19.5" fill="#4DC3F5"/><rect x="30" y="16" width="3" height="10" rx="1.5" fill="#FFD740"/><circle cx="31.5" cy="27" r="3" fill="#F54040"/></svg></div>
+          <div class="why-icon"><svg class="icon" aria-hidden="true"><use href="#ic-headset"/></svg></div>
           <h3>Expert Support</h3>
           <p>Our team understands the nail industry inside and out. We're here to help you choose the right products for every technique and service.</p>
         </div>
@@ -654,21 +673,21 @@
           <h2 class="reveal d1">Get in Touch</h2>
           <div class="contact-rows reveal d2">
             <div class="contact-row">
-              <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#F54040"/><path d="M20 6C14 6 9 11 9 17C9 24 20 35 20 35C20 35 31 24 31 17C31 11 26 6 20 6Z" fill="#1B2E78"/><circle cx="20" cy="17" r="5" fill="#F54040"/><circle cx="20" cy="17" r="2" fill="#FFD740"/></svg></div>
+              <div class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#ic-pin"/></svg></div>
               <div>
                 <div class="contact-label">Address</div>
                 <div class="contact-value">46A Berkshire Rd, Sunshine North VIC 3020</div>
               </div>
             </div>
             <div class="contact-row">
-              <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#5CC862"/><path d="M13 8H17L19 14L16 17C17.5 20.5 19.5 22.5 23 24L26 21L32 23V27C32 29.5 29.5 32 27 31C17 28 9 20 8 10C7.5 7.5 10.5 6 13 8Z" fill="#1B2E78"/></svg></div>
+              <div class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#ic-phone"/></svg></div>
               <div>
                 <div class="contact-label">Phone</div>
                 <div class="contact-value"><a href="tel:0451228899">0451 228 899</a></div>
               </div>
             </div>
             <div class="contact-row">
-              <div class="contact-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="9" fill="#4DC3F5"/><circle cx="20" cy="20" r="13" fill="#1B2E78"/><circle cx="20" cy="20" r="9" fill="#4DC3F5"/><path d="M20 13V20L25 24" stroke="#1B2E78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#ic-clock"/></svg></div>
               <div>
                 <div class="contact-label">Hours</div>
                 <div class="contact-value">Mon–Sat: Please call for current hours</div>
