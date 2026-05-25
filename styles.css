@@ -651,10 +651,10 @@ h1, h2, h3, h4 {
   margin-right: 4px;
 }
 .trust-badges span svg.icon {
-  width: 15px;
-  height: 15px;
+  width: 23px;
+  height: 23px;
   color: var(--accent);
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 .hero-text h1 {
@@ -686,14 +686,16 @@ h1, h2, h3, h4 {
 
 .trust-badges {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.25rem;
   flex-wrap: wrap;
   align-items: center;
 }
 .trust-badges span {
   font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1.275rem;
   color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
 }
 
 .hero-text {
