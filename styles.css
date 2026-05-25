@@ -99,8 +99,9 @@ h1, h2, h3, h4 {
    PROMO BANNER
    ============================================================ */
 .promo-banner {
-  background: #0f0f0f;
-  border-bottom: 1px solid rgba(172, 135, 62, 0.25);
+  background: #1a1206;
+  border-top: 1px solid rgba(172, 135, 62, 0.3);
+  border-bottom: 1px solid rgba(172, 135, 62, 0.3);
   overflow: hidden;
   height: 20px;
   line-height: 1;
@@ -524,9 +525,9 @@ h1, h2, h3, h4 {
   min-height: 90vh;
   display: flex;
   align-items: center;
-  padding-top: 6rem;
   background: var(--surface);
   overflow: hidden;
+  /* padding-top set dynamically by JS to match total header height */
 }
 
 .hero-video {

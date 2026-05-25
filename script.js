@@ -22,6 +22,7 @@ function updateScrollProgress() {
 const mainNav = document.getElementById('mainNav');
 const topBar = document.querySelector('.top-bar');
 const promoBanner = document.querySelector('.promo-banner');
+const heroSection = document.getElementById('home');
 
 function updateNavOffset() {
   const topBarH = topBar ? topBar.offsetHeight : 0;
@@ -29,6 +30,12 @@ function updateNavOffset() {
   const totalAbove = topBarH + promoH;
   const offset = Math.max(0, totalAbove - window.scrollY);
   mainNav.style.top = offset + 'px';
+
+  // Push hero content to start just below the nav
+  if (heroSection) {
+    const navH = mainNav ? mainNav.offsetHeight : 0;
+    heroSection.style.paddingTop = (totalAbove + navH + 16) + 'px';
+  }
 }
 
 function handleNavScroll() {
